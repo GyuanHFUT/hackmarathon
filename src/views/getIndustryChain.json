@@ -1,0 +1,309 @@
+{
+  "code": 0,
+  "msg": {
+    "nodes": [
+      {
+        "key": 1,
+        "name": "\u6d59\u80fd\u7535\u529b@600023",
+        "type": "company"
+      },
+      { "key": 2, "name": "\u7535\u529b", "type": "industry" },
+      { "key": 3, "name": "\u878d\u8d44\u878d\u5238", "type": "concept" },
+      { "key": 4, "name": "\u6838\u7535", "type": "concept" },
+      { "key": 5, "name": "\u7535\u6e90", "type": "product" },
+      {
+        "key": 6,
+        "name": "\u6cf0\u8c6a\u79d1\u6280@600590",
+        "type": "company"
+      },
+      {
+        "key": 7,
+        "name": "\u5929\u5bcc\u80fd\u6e90@600509",
+        "type": "company"
+      },
+      { "key": 8, "name": "\u81ea\u52a8\u5316\u6d4b\u8bd5", "type": "product" },
+      {
+        "key": 9,
+        "name": "\u4e2d\u5149\u9632\u96f7@300414",
+        "type": "company"
+      },
+      {
+        "key": 10,
+        "name": "\u79d1\u534e\u6052\u76db@002335",
+        "type": "company"
+      },
+      {
+        "key": 11,
+        "name": "\u4e1c\u65b9\u4e2d\u79d1@002819",
+        "type": "company"
+      },
+      {
+        "key": 12,
+        "name": "\u5367\u9f99\u7535\u6c14@600580",
+        "type": "company"
+      },
+      {
+        "key": 13,
+        "name": "\u79d1\u6cf0\u7535\u6e90@300153",
+        "type": "company"
+      },
+      { "key": 14, "name": "\u4eac\u6cc9\u534e@002885", "type": "company" },
+      { "key": 15, "name": "\u539f\u6cb9", "type": "product" },
+      {
+        "key": 16,
+        "name": "\u4e2d\u6d77\u6cb9\u670d@601808",
+        "type": "company"
+      },
+      {
+        "key": 17,
+        "name": "\u65b0\u6f6e\u80fd\u6e90@600777",
+        "type": "company"
+      },
+      { "key": 18, "name": "\u7eaf\u82ef", "type": "product" },
+      {
+        "key": 19,
+        "name": "\u6625\u79cb\u822a\u7a7a@601021",
+        "type": "company"
+      },
+      {
+        "key": 20,
+        "name": "\u901a\u6e90\u77f3\u6cb9@300164",
+        "type": "company"
+      },
+      { "key": 21, "name": "\u5b81\u6ce2\u6e2f@601018", "type": "company" },
+      { "key": 22, "name": "\u6ca5\u9752", "type": "product" },
+      { "key": 23, "name": "\u65e5\u7167\u6e2f@600017", "type": "company" },
+      {
+        "key": 24,
+        "name": "\u6d77\u6cb9\u5de5\u7a0b@600583",
+        "type": "company"
+      },
+      {
+        "key": 25,
+        "name": "\u7533\u80fd\u80a1\u4efd@600642",
+        "type": "company"
+      },
+      { "key": 26, "name": "\u7094\u70c3", "type": "product" },
+      {
+        "key": 27,
+        "name": "\u6d32\u9645\u6cb9\u6c14@600759",
+        "type": "company"
+      },
+      {
+        "key": 28,
+        "name": "\u77f3\u5316\u673a\u68b0@000852",
+        "type": "company"
+      },
+      {
+        "key": 29,
+        "name": "\u4e2d\u56fd\u77f3\u6cb9@601857",
+        "type": "company"
+      },
+      {
+        "key": 30,
+        "name": "\u6d77\u4e0a\u6cb9\u7530\u670d\u52a1",
+        "type": "product"
+      },
+      {
+        "key": 31,
+        "name": "\u5e7f\u6cfd\u80a1\u4efd@600882",
+        "type": "company"
+      },
+      {
+        "key": 32,
+        "name": "\u9752\u5c9b\u91d1\u738b@002094",
+        "type": "company"
+      },
+      {
+        "key": 33,
+        "name": "\u4e1c\u65b9\u822a\u7a7a@600115",
+        "type": "company"
+      },
+      {
+        "key": 34,
+        "name": "\u6cb9\u6c14\u63a7\u5236\u7cfb\u7edf",
+        "type": "product"
+      },
+      { "key": 35, "name": "\u5929\u6d25\u6e2f@600717", "type": "company" },
+      {
+        "key": 36,
+        "name": "\u4e07\u76db\u80a1\u4efd@603010",
+        "type": "company"
+      },
+      {
+        "key": 37,
+        "name": "\u901a\u4ea7\u4e3d\u661f@002243",
+        "type": "company"
+      },
+      {
+        "key": 38,
+        "name": "\u6cb9\u4e95\u5206\u6790\u8bbe\u5907",
+        "type": "product"
+      },
+      {
+        "key": 39,
+        "name": "\u56fd\u9645\u5b9e\u4e1a@000159",
+        "type": "company"
+      },
+      {
+        "key": 40,
+        "name": "\u4e0a\u6d77\u77f3\u5316@600688",
+        "type": "company"
+      },
+      {
+        "key": 41,
+        "name": "\u4e2d\u56fd\u56fd\u822a@601111",
+        "type": "company"
+      },
+      {
+        "key": 42,
+        "name": "\u77f3\u6cb9\u538b\u88c2\u652f\u6491\u5242",
+        "type": "product"
+      },
+      {
+        "key": 43,
+        "name": "\u6c38\u65b0\u80a1\u4efd@002014",
+        "type": "company"
+      },
+      { "key": 44, "name": "\u5357\u4eac\u6e2f@002040", "type": "company" },
+      {
+        "key": 45,
+        "name": "\u5e7f\u6c47\u80fd\u6e90@600256",
+        "type": "company"
+      },
+      { "key": 46, "name": "\u539f\u6cb9\u8d38\u6613", "type": "product" },
+      { "key": 47, "name": "\u5927\u8fde\u6e2f@601880", "type": "company" },
+      {
+        "key": 48,
+        "name": "\u5b9d\u5229\u56fd\u9645@300135",
+        "type": "company"
+      },
+      {
+        "key": 49,
+        "name": "\u9053\u68ee\u80a1\u4efd@603800",
+        "type": "company"
+      },
+      { "key": 50, "name": "\u5149\u4f0f\u53d1\u7535", "type": "product" },
+      {
+        "key": 51,
+        "name": "\u6b63\u6cf0\u7535\u5668@601877",
+        "type": "company"
+      },
+      {
+        "key": 52,
+        "name": "\u6c5f\u5357\u5316\u5de5@002226",
+        "type": "company"
+      },
+      { "key": 53, "name": "\u4f9b\u7535", "type": "product" },
+      {
+        "key": 54,
+        "name": "\u6842\u4e1c\u7535\u529b@600310",
+        "type": "company"
+      },
+      {
+        "key": 55,
+        "name": "\u798f\u80fd\u80a1\u4efd@600483",
+        "type": "company"
+      },
+      { "key": 56, "name": "\u65e0\u7ebf\u6a21\u5757", "type": "product" },
+      {
+        "key": 57,
+        "name": "\u51ef\u53d1\u7535\u6c14@300407",
+        "type": "company"
+      },
+      { "key": 58, "name": "\u7a57\u6052\u8fd0A@000531", "type": "company" },
+      {
+        "key": 59,
+        "name": "\u6587\u5c71\u7535\u529b@600995",
+        "type": "company"
+      },
+      { "key": 60, "name": "\u70ed\u529b", "type": "product" },
+      { "key": 61, "name": "*ST\u53cb\u597d@600778", "type": "company" },
+      {
+        "key": 62,
+        "name": "\u6f33\u6cfd\u7535\u529b@000767",
+        "type": "company"
+      },
+      {
+        "key": 63,
+        "name": "\u4eac\u80fd\u7535\u529b@600578",
+        "type": "company"
+      },
+      { "key": 64, "name": "\u4e9a\u739b\u987f@002623", "type": "company" }
+    ],
+    "relations": {
+      "\u4e0a\u6e38": [
+        [15, 22],
+        [5, 8]
+      ],
+      "\u4e0b\u6e38": [
+        [53, 56],
+        [15, 18]
+      ],
+      "\u4e3b\u4f53": [[15, 26]],
+      "\u4e3b\u8425\u4ea7\u54c1": [
+        [27, 26],
+        [35, 34],
+        [59, 56],
+        [9, 8],
+        [23, 22],
+        [1, 15],
+        [13, 8],
+        [1, 60],
+        [63, 2],
+        [24, 22],
+        [28, 26],
+        [31, 30],
+        [33, 30],
+        [36, 34],
+        [47, 46],
+        [17, 15],
+        [1, 2],
+        [10, 8],
+        [19, 18],
+        [43, 42],
+        [51, 50],
+        [57, 56],
+        [1, 5],
+        [55, 53],
+        [16, 15],
+        [20, 18],
+        [40, 38],
+        [44, 42],
+        [29, 26],
+        [25, 22],
+        [37, 34],
+        [52, 50],
+        [54, 53],
+        [58, 56],
+        [61, 60],
+        [64, 2],
+        [1, 50],
+        [7, 5],
+        [48, 46],
+        [21, 18],
+        [41, 38],
+        [6, 5],
+        [45, 42],
+        [1, 53],
+        [11, 8],
+        [39, 38],
+        [62, 60],
+        [32, 30],
+        [49, 46],
+        [14, 8],
+        [12, 8]
+      ],
+      "\u4f9d\u5b58\u5173\u7cfb": [[15, 42]],
+      "\u6240\u5c5e\u6982\u5ff5": [
+        [1, 3],
+        [1, 4]
+      ],
+      "\u6240\u5c5e\u884c\u4e1a": [[1, 2]],
+      "\u670d\u52a1": [[15, 30]],
+      "\u751f\u4ea7\u5173\u7cfb": [[15, 34]],
+      "\u8d38\u6613": [[15, 46]],
+      "\u8f85\u52a9": [[15, 38]]
+    }
+  }
+}

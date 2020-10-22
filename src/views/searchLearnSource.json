@@ -1,0 +1,196 @@
+{
+  "errorcode": 0,
+  "errormsg": "",
+  "items": [
+    [
+      "http://guba.eastmoney.com/news,600023,95409476.html",
+      {
+        "keys": [
+          "\u6caa\u6df1\u5e02\u6838\u7535",
+          "\u5168\u56fd\u6392\u540d\u706b\u529b\u53d1\u7535\u4f01\u4e1a",
+          "\u5168\u56fd\u7701\u7ea7\u53d1\u7535\u4f01\u4e1a\u4e2d\u9886\u5148\u4f01\u4e1a"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u5168\u56fd\u6392\u540d\u706b\u529b\u53d1\u7535\u4f01\u4e1a",
+          "news_pubtime": "2013-12-18 11:15:38",
+          "news_sentiment": 0.1913887362637363,
+          "news_source": " ",
+          "news_title": "\u6d59\u80fd\u7535\u529b\u8d44\u8baf",
+          "news_url": "http://guba.eastmoney.com/news,600023,95409476.html",
+          "sent": "\u6d59\u80fd\u7535\u529b\u662f\u5168\u56fd\u6392\u540d\u524d\u5341\u7684\u706b\u529b\u53d1\u7535\u4f01\u4e1a(\u4ee52012\u5e7412\u670831\u65e5\u63a7\u80a1\u88c5\u673a\u5bb9\u91cf\u8ba1),\u662f\u5168\u56fd\u7701\u7ea7\u53d1\u7535\u4f01\u4e1a\u4e2d\u7684\u9886\u5148\u4f01\u4e1a,\u6d59\u6c5f\u7701\u6700\u5927\u7684\u7535\u529b\u751f\u4ea7\u4f01\u4e1a"
+        }
+      }
+    ],
+    [
+      "http://guba.eastmoney.com/news,600023,95376159.html",
+      {
+        "keys": [
+          "\u8f6c",
+          "B\u80a1\u8f6c\u6295A\u80a1",
+          "\u65b0\u653f\u540e\u65b0\u80a1"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u4e2a\u5403\u8783\u87f9\u516c\u53f8",
+          "news_pubtime": "2013-12-18 08:47:09",
+          "news_sentiment": 0.00986842105263157,
+          "news_source": " ",
+          "news_title": "\u6d59\u80fd\u7535\u529b\u8d44\u8baf",
+          "news_url": "http://guba.eastmoney.com/news,600023,95376159.html",
+          "sent": "\u8bb0\u8005\u4ece\u4e0a\u4ea4\u6240\u4e86\u89e3\u5230,\u6d59\u80fd\u7535\u529b\u9884\u8ba119\u65e5\u767b\u9646A\u80a1\u3002\u8fd9\u4e5f\u662f\u6caa\u5e02\u53d1\u5e03<<\u5173\u4e8e\u8fdb\u4e00\u6b65\u52a0\u5f3a\u65b0\u80a1\u4e0a\u5e02\u521d\u671f\u4ea4\u6613\u76d1\u7ba1\u7684\u901a\u77e5>>\u540e\u9996\u4e2a\u5403\u8783\u87f9\u7684\u516c\u53f8\u3002"
+        }
+      }
+    ],
+    [
+      "http://finance.sina.com.cn/stock/t/20141013/004320516940.shtml",
+      {
+        "keys": [
+          "\u6d59\u6c5f\u7701\u5185\u9f99\u5934\u7535\u529b\u4f01\u4e1a",
+          "\u5168\u56fd\u7701\u7ea7\u53d1\u7535\u4f01\u4e1a\u4e2d\u9886\u5148\u4f01\u4e1a"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u6d59\u6c5f\u7701\u80fd\u6e90\u96c6\u56e2\u6709\u9650\u516c\u53f8\u7535\u529b\u4e3b\u4e1a\u8d44\u4ea7\u6574\u4f53\u8fd0\u8425\u5e73\u53f0",
+          "news_pubtime": "2014-10-13  00:43",
+          "news_sentiment": 0.18004235295454013,
+          "news_source": " ",
+          "news_title": "\u4e3a\u53d1\u5c55\u63d0\u4f9b\u52a8\u529b\u4e3a\u793e\u4f1a\u521b\u9020\u4f7f\u547d",
+          "news_url": "http://finance.sina.com.cn/stock/t/20141013/004320516940.shtml",
+          "sent": "\u6d59\u80fd\u7535\u529b\u4f5c\u4e3a\u6d59\u6c5f\u7701\u80fd\u6e90\u96c6\u56e2\u6709\u9650\u516c\u53f8\u7535\u529b\u4e3b\u4e1a\u8d44\u4ea7\u6574\u4f53\u8fd0\u8425\u5e73\u53f0,\u4e3b\u8981\u4ece\u4e8b\u706b\u529b\u53d1\u7535\u4e1a\u52a1,\u540c\u65f6\u516c\u53f8\u8fd8\u63d0\u4f9b\u70ed\u529b\u4ea7\u54c1,\u4ee5\u53ca\u53c2\u4e0e\u6838\u7535\u6295\u8d44\u4e1a\u52a1"
+        }
+      }
+    ],
+    [
+      "http://finance.sina.com.cn/roll/20131220/015117692616.shtml",
+      {
+        "keys": [
+          "\u8bc1\u76d1\u4f1a\u65b0\u80a1\u53d1\u884c\u6539\u9769\u65b0\u653f\u5b9e\u65bd\u524d\u6700\u540e\u65b0\u80a1",
+          "\u6700\u540e\u6ca1\u6709\u6da8\u8dcc\u5e45\u9650\u5236\u65b0\u80a1"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u6700\u540e\u6ca1\u6709\u6da8\u8dcc\u5e45\u9650\u5236\u65b0\u80a1",
+          "news_pubtime": "2013-12-20  01:51",
+          "news_sentiment": 0.03662932336444921,
+          "news_source": " ",
+          "news_title": "\"B\u8f6cA\u7b2c\u4e00\u80a1\"\u6d59\u80fd\u7535\u529b\u6628\u4e0a\u5e02",
+          "news_url": "http://finance.sina.com.cn/roll/20131220/015117692616.shtml",
+          "sent": "\u7531\u4e8e\u6d59\u80fd\u7535\u529b\u4e0a\u5e02\u524d\u768414\u4e2a\u6708\u5185\u6ca1\u6709\u65b0\u80a1\u4e0a\u5e02,\u4e14\u8be5\u80a1\u4e5f\u662f\u6700\u540e\u4e00\u53ea\u6ca1\u6709\u6da8\u8dcc\u5e45\u9650\u5236\u7684\u65b0\u80a1,\u6628\u65e5\u5e02\u573a\u5bf9\u6d59\u80fd\u7535\u529b\u7684\u7092\u4f5c\u663e\u5f97\u9887\u4e3a\u75af\u72c2"
+        }
+      }
+    ],
+    [
+      "http://industry.jrj.com.cn/2013/12/17124016344781.shtml",
+      {
+        "keys": [
+          "\u5728\u4e0a\u4ea4\u6240\u4e0a\u5e02\u65b0\u80a1",
+          "\u6caa\u6df1\u5e02\u6838\u7535"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u5728\u4e0a\u4ea4\u6240\u4e0a\u5e02\u65b0\u80a1",
+          "news_pubtime": "2013-12-17  12:40",
+          "news_sentiment": 0.2738487394957983,
+          "news_source": " ",
+          "news_title": "\u9996\u9875\u8d22\u7ecf\u80a1\u7968\u5927\u76d8\u4e2a\u80a1\u65b0\u80a1\u884c\u60c5\u6e2f\u80a1\u7f8e\u80a1\u57fa\u91d1\u7406\u8d22\u9ec4\u91d1\u94f6\u884c\u4fdd\u9669\u79c1\u52df\u4fe1\u6258\u671f\u8d27\u76f4\u64ad\u89c6\u9891\u535a\u5ba2\u8bba\u575b\u7231\u80a1\u6c7d\u8f66\u623f\u4ea7\u79d1\u6280\u56fe\u7247\u5f69\u7968\u6211\u7684\u91d1\u878d\u754c",
+          "news_url": "http://industry.jrj.com.cn/2013/12/17124016344781.shtml",
+          "sent": "\u6d59\u80fd\u7535\u529b\u5c06\u6210\u4e3a2013\u5e74\u5728\u4e0a\u4ea4\u6240\u4e0a\u5e02\u7684\u7b2c\u4e00\u5bb6\u65b0\u80a1,\u4e3aA\u80a1\u5e26\u6765\u65b0\u9c9c\u8840\u6db2,\u5728\u7092\u65b0\u6548\u5e94\u9a71\u7b56\u4e0b,\u5fc5\u5c06\u5438\u5f15\u6295\u8d44\u8005\u7684\u6ce8\u610f\u529b"
+        }
+      }
+    ],
+    [
+      "http://q.stock.sohu.com/news/cn/398/601398/2707105.shtml",
+      {
+        "keys": [
+          "\u6743\u5229",
+          "\u6d59\u6c5f\u7701\u7701\u5c5e\u56fd\u6709\u4f01\u4e1a\u6d59\u80fd\u96c6\u56e2\u4e0b\u5c5e\u7535\u529b\u4e1a\u52a1\u7684\u552f\u4e00\u53d1\u5c55\u5e73\u53f0"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u6d59\u6c5f\u7701\u7701\u5c5e\u56fd\u6709\u4f01\u4e1a\u6d59\u80fd\u96c6\u56e2\u4e0b\u5c5e\u7535\u529b\u4e1a\u52a1\u7684\u552f\u4e00\u53d1\u5c55\u5e73\u53f0",
+          "news_pubtime": "2013-12-13 04:03",
+          "news_sentiment": 0.10302285714285712,
+          "news_source": " ",
+          "news_title": "\u6d59\u80fd\u7535\u529b\u6458\u5f97\"B\u8f6cA\"\u9996\u5355\u5168\u9762\u6253\u9020\u4f18\u8d28\u7535\u529b\u8d44\u4ea7\u8fd0\u8425\u5e73\u53f0",
+          "news_url": "http://q.stock.sohu.com/news/cn/398/601398/2707105.shtml",
+          "sent": "\u6d59\u80fd\u7535\u529b\u4f5c\u4e3a\u6d59\u6c5f\u7701\u7701\u5c5e\u56fd\u6709\u4f01\u4e1a\u6d59\u80fd\u96c6\u56e2\u4e0b\u5c5e\u7535\u529b\u4e1a\u52a1\u7684\u552f\u4e00\u53d1\u5c55\u5e73\u53f0,\u662f\u6d59\u6c5f\u7701\u6700\u5927\u7684\u53d1\u7535\u4f01\u4e1a"
+        }
+      }
+    ],
+    [
+      "http://guba.eastmoney.com/news,600023,95485409.html",
+      {
+        "keys": [
+          "\u5168\u56fd\u6700\u5927\u56fd\u6709\u63a7\u80a1\u80fd\u6e90\u7c7b\u4e0a\u5e02\u516c\u53f8",
+          "\u6caa\u6df1\u5e02\u6838\u7535"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u5168\u56fd\u6700\u5927\u56fd\u6709\u63a7\u80a1\u80fd\u6e90\u7c7b\u4e0a\u5e02\u516c\u53f8",
+          "news_pubtime": "2015-06-01 23:30:03",
+          "news_sentiment": 0.1442857142857143,
+          "news_source": " ",
+          "news_title": "\u6d59\u80fd\u7535\u529b\u4eca\u65e5\u6302\u724c\u4e0a\u5e02 \u9996\u65e5\u65e0\u6da8\u8dcc\u5e45\u9650\u5236",
+          "news_url": "http://guba.eastmoney.com/news,600023,95485409.html",
+          "sent": "\u6b64\u6b21\u5438\u6536\u5408\u5e76\u4e1c\u7535B\u80a1\u5b8c\u6210\u540e,\u5c06\u5b9e\u73b0\u6d59\u80fd\u96c6\u56e2\u7535\u529b\u4e3b\u4e1a\u8d44\u4ea7\u6574\u4f53\u4e0a\u5e02,\u6d59\u80fd\u7535\u529b\u5c06\u6210\u4e3a\u5168\u56fd\u6700\u5927\u7684\u56fd\u6709\u63a7\u80a1\u80fd\u6e90\u7c7b\u4e0a\u5e02\u516c\u53f8\u4e4b\u4e00\u3002"
+        }
+      }
+    ],
+    [
+      "http://guba.eastmoney.com/news,600023,95376552.html",
+      {
+        "keys": [
+          "\u5168\u56fd\u6392\u540d\u706b\u529b\u53d1\u7535\u4f01\u4e1a",
+          "\u5168\u56fd\u7701\u7ea7\u53d1\u7535\u4f01\u4e1a\u4e2d\u9886\u5148\u4f01\u4e1a"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u6d59\u6c5f\u7701\u6700\u5927\u7535\u529b\u751f\u4ea7\u4f01\u4e1a",
+          "news_pubtime": "2014-11-01 09:55:09",
+          "news_sentiment": 0.19357142857142853,
+          "news_source": " ",
+          "news_title": "\u6d59\u80fd\u7535\u529b\u660e\u65e5\u4e0a\u5e02 \u6709\u671b\u95ee\u9f0e\u6838\u7535\u7b2c\u4e00\u80a1",
+          "news_url": "http://guba.eastmoney.com/news,600023,95376552.html",
+          "sent": "\u6d59\u80fd\u7535\u529b\u662f\u5168\u56fd\u6392\u540d\u524d\u5341\u7684\u706b\u529b\u53d1\u7535\u4f01\u4e1a(\u4ee52012\u5e7412\u670831\u65e5\u63a7\u80a1\u88c5\u673a\u5bb9\u91cf\u8ba1),\u662f\u5168\u56fd\u7701\u7ea7\u53d1\u7535\u4f01\u4e1a\u4e2d\u7684\u9886\u5148\u4f01\u4e1a,\u6d59\u6c5f\u7701\u6700\u5927\u7684\u7535\u529b\u751f\u4ea7\u4f01\u4e1a\u3002"
+        }
+      }
+    ],
+    [
+      "http://stock.10jqka.com.cn/20141009/c567637339.shtml",
+      {
+        "keys": [
+          "\u5168\u56fd\u7701\u7ea7\u53d1\u7535\u4f01\u4e1a\u4e2d\u9886\u5148\u4f01\u4e1a"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u6d59\u6c5f\u7701\u6700\u5927\u7535\u529b\u751f\u4ea7\u4f01\u4e1a",
+          "news_pubtime": "2014-10-09 08:47:12",
+          "news_sentiment": 0.19999999999999998,
+          "news_source": " ",
+          "news_title": "\u6d59\u80fd\u7535\u529b\u53ef\u8f6c\u503a\u52df\u8d44100\u4ebf\u5143\u505a\u5f3a\u706b\u7535\u6838\u7535\u4e3b\u4e1a",
+          "news_url": "http://stock.10jqka.com.cn/20141009/c567637339.shtml",
+          "sent": "\u6d59\u80fd\u7535\u529b\u662f\u5168\u56fd\u7701\u7ea7\u53d1\u7535\u4f01\u4e1a\u4e2d\u7684\u9886\u5148\u4f01\u4e1a,\u6d59\u6c5f\u7701\u6700\u5927\u7684\u7535\u529b\u751f\u4ea7\u4f01\u4e1a,\u5177\u6709\u8f83\u5f3a\u7684\u5e02\u573a\u7ade\u4e89\u529b"
+        }
+      }
+    ],
+    [
+      "http://www.stcn.com/2014/0826/11668810.shtml",
+      {
+        "keys": [
+          "\u6d59\u80fd\u96c6\u56e2\u8fd0\u8425\u7535\u529b\u677f\u5757\u4e1a\u52a1\u5e73\u53f0"
+        ],
+        "news": {
+          "event": "\u6d59\u80fd\u7535\u529b",
+          "event_desc": "\u6d59\u80fd\u96c6\u56e2\u8fd0\u8425\u7535\u529b\u677f\u5757\u4e1a\u52a1\u5e73\u53f0",
+          "news_pubtime": "2014-08-26 06:38",
+          "news_sentiment": 0.10354166666666666,
+          "news_source": " ",
+          "news_title": "\u540c\u4e1a\u7ade\u4e89\u5f15\u53d1\u6d59\u80fd\u96c6\u56e2\u6ce8\u8d44\u9884\u671f",
+          "news_url": "http://www.stcn.com/2014/0826/11668810.shtml",
+          "sent": "\u6d59\u80fd\u7535\u529b\u662f\u6d59\u80fd\u96c6\u56e2\u8fd0\u8425\u7535\u529b\u677f\u5757\u7684\u4e1a\u52a1\u5e73\u53f0,\u4e1a\u52a1\u8303\u56f4\u4e3b\u8981\u6db5\u76d6\u7535\u529b\u751f\u4ea7\u53ca\u9500\u552e\u7b49\u91cd\u8981\u73af\u8282"
+        }
+      }
+    ]
+  ]
+}
