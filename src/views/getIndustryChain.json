@@ -5,7 +5,8 @@
       {
         "key": 1,
         "name": "\u6d59\u80fd\u7535\u529b@600023",
-        "type": "company"
+        "type": "company",
+        "url": "https://www.baidu.com"
       },
       { "key": 2, "name": "\u7535\u529b", "type": "industry" },
       { "key": 3, "name": "\u878d\u8d44\u878d\u5238", "type": "concept" },

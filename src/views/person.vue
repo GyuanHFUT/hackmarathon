@@ -66,9 +66,148 @@
                     </div>
                     <div class="card" data-type="fact" data-subtype="entity" data-folded="false" v-if="searchNoResult==0">
                         <div data-collapse="expanded">
+                            <section data-scope="description" :data-truncate="conceptList.default.length<=12?'all':'peak'" style="border-top:none" v-show="conceptShow">
+                                <header class="">
+                                    <h4>概念描述</h4>
+                                </header>
+                                <div :data-clip="conceptList.default.length<=12?'false':'true'" class="conceptDataDiv" style="">
+                                    <!-- 输入拆解出多个标签 -->
+                                    <div style="display:block;width:100%;margin-bottom: .5rem" >
+                                        <span :class="{'active':currentTag == item2, 'tagspan':true}" v-for="(item2,index2) in conceptList.tags" :key="index2" @click="changeTag(item2)">{{item2}}</span>
+                                    </div>
+                                    <!--  -->
+                                    <div v-for="(item,index) in conceptList.default" :key="index" :data-span="!item.expanded?'cell':'row'" :data-extra="index>11?'true':false">
+                                        <article class="fact" :id="item._id" data-render="cell">
+                                            <dl data-answer="object" :data-color="levelColor(item)" :title="'该信息可信评分为' + item.weight">
+                                                <dd data-field="object" @click="toggleTagDetail(item)">{{item._id}}</dd>
+                                            </dl>
+                                        </article>
+                                        <transition name="router-slid">
+                                            <article class="fact"  data-render="tuple" v-if="item.expanded" style="margin-top: 0.75rem;">
+                                            <dl data-answer="object" :data-confidence="item.weight" :data-color="levelColor(item)" :title="'该信息可信评分为'+item.weight">
+                                                <dd data-field="概念">{{currentTag}}</dd>
+                                                <dd data-field="关系">描述</dd>
+                                                <dd data-field="描述信息">{{item._id}}</dd>
+                                            </dl>
+                                            <div :data-collapse="item.expanded?'collapse':'expanded'" style="padding-bottom: 0.5rem">
+                                                <span>可信度评分{{item.weight}}分，学习来源于以下等{{item.news.length}}条资讯</span>
+                                                <ul>
+                                                    <li v-for="(itemnew,indexnew) in item.news" :key="indexnew">
+                                                        <a :href="itemnew.news_url" target="_blank" >
+                                                            <div class="news-title">
+                                                                <h5>{{itemnew.news_title}}</h5>
+                                                                <div class="right-text">
+                                                                    <time>{{itemnew.news_pubtime|formatDate}}</time>
+                                                                    <cite>{{itemnew.news_source}}</cite>
+                                                                </div>
+                                                            </div>
+                                                            <div class="news-content">{{'...'+itemnew.sent}}</div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                        </transition>
+                                    </div>
+                                </div>
+                                <footer data-decoration="more" @click="toggleHeight($event)" v-if="conceptList.default.length>12"></footer>
+                            </section>
+                            
+                            <section data-scope="cause" :data-truncate="causeList.length<=12?'all':'peak'" v-show="preCauseShow">
+                                <header class="">
+                                    <h4>前序原因</h4>
+                                </header>
+                                <div :data-clip="causeList.length<=12?'false':'true'" class="causeDataDiv" style="">
+                                    <div v-for="(item,index) in causeList" :key="index" :data-span="!item.expanded?'cell':'row'" :data-extra="index>11?'true':false">
+                                        <article class="fact" :id="item._id" data-render="cell">
+                                            <dl data-answer="object" :data-color="levelColor(item)" :title="'该信息可信评分为' + item.weight">
+                                                <dd data-field="object" @click="toggleCauseDetail(item)">{{item._id}}</dd>
+                                            </dl>
+                                        </article>
+                                        <transition name="router-slid">
+                                            <article class="fact"  data-render="tuple" v-if="item.expanded" style="margin-top: 0.75rem;">
+                                                <dl data-answer="object" :data-confidence="item.weight" :data-color="levelColor(item)" :title="'该信息可信评分为'+item.weight">
+                                                    <dd data-field="因事件">{{item._id}}</dd>
+                                                    <dd data-field="关系">因果</dd>
+                                                    <dd data-field="果事件">{{inputTemp}}</dd>
+                                                    <dd data-field="产业链" v-if="item.chain && item.chain.nodes"><img :src="icon_chain" style="cursor: pointer" @click="showChainChartsPop(item)" /></dd>
+                                                </dl>
+                                                <div :data-collapse="item.expanded?'collapse':'expanded'" style="padding-bottom: 0.5rem">
+                                                    <span>可信度评分{{item.weight}}分，学习来源于以下资讯</span>
+                                                    <ul>
+                                                        <li v-for="(itemnew,indexnew) in item.news" :key="indexnew">
+                                                            <a :href="itemnew.news_url" target="_blank" >
+                                                                <div class="news-title">
+                                                                    <h5>{{itemnew.news_title}}</h5>
+                                                                    <div class="right-text">
+                                                                        <time>{{itemnew.news_pubtime|formatDate}}</time>
+                                                                        <cite>{{itemnew.news_source}}</cite>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="news-content">{{'...'+itemnew.sent}}</div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="further_search_block">
+                                                        <span>进一步搜索</span><a class="further_search" data-decoration="search" href="javascript:void(0)" target="_self" @click="toSearchResult(item._id)">{{item._id}}</a>
+                                                    </div>
+                                                        
+                                                </div>
+                                            </article>
+                                        </transition>
+                                    </div>
+                                </div>
+                                <footer data-decoration="more" @click="toggleHeight($event)" v-if="causeList.length>12"></footer>
+                            </section>
+                            <section data-scope="effect" :data-truncate="effectList.length<=12?'all':'peak'" v-show="postEffectShow">
+                                <header class="">
+                                    <h4>后续结果</h4>
+                                </header>
+                                <div :data-clip="effectList.length<=12?'false':'true'" class="effectDataDiv" style="">
+                                    <div v-for="(item,index) in effectList" :key="index" :data-span="!item.expanded?'cell':'row'" :data-extra="index>11?'true':false">
+                                        <article class="fact" :id="item._id" data-render="cell">
+                                            <dl data-answer="object" :data-color="levelColor(item)" :title="'该信息可信评分为' + item.weight">
+                                                <dd data-field="object" @click="toggleEffectDetail(item)">{{item._id}}</dd>
+                                            </dl>
+                                        </article>
+                                        <transition name="router-slid">
+                                            <article class="fact"  data-render="tuple" v-if="item.expanded" style="margin-top: 0.75rem;">
+                                                <dl data-answer="object" :data-confidence="item.weight" :data-color="levelColor(item)" :title="'该信息可信评分为'+item.weight">
+                                                    <dd data-field="因事件">{{inputTemp}}</dd>
+                                                    <dd data-field="关系">因果</dd>
+                                                    <dd data-field="果事件">{{item._id}}</dd>
+                                                    <dd data-field="产业链" v-if="item.chain && item.chain.nodes"><img :src="icon_chain" style="cursor: pointer" @click="showChainChartsPop(item)" /></dd>
+                                                    <!--                                            <dd data-field="置信度" class="number">{{item.confidence}}</dd>-->
+                                                </dl>
+                                                <div :data-collapse="item.expanded?'collapse':'expanded'" style="padding-bottom: 0.5rem">
+                                                    <span>可信度评分{{item.weight}}分，学习来源于以下等{{item.news.length}}条资讯</span>
+                                                    <ul>
+                                                        <li v-for="(itemnew,indexnew) in item.news" :key="indexnew">
+                                                            <a :href="itemnew.news_url" target="_blank" >
+                                                                <div class="news-title">
+                                                                    <h5>{{itemnew.news_title}}</h5>
+                                                                    <div class="right-text">
+                                                                        <time>{{itemnew.news_pubtime|formatDate}}</time>
+                                                                        <cite>{{itemnew.news_source}}</cite>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="news-content">{{'...'+itemnew.sent}}</div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="further_search_block">
+                                                        <span>进一步搜索</span><a class="further_search" data-decoration="search" href="javascript:void(0)" target="_self" @click="toSearchResult(item._id)">{{item._id}}</a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </transition>
+                                    </div>
+                                </div>
+                                <footer data-decoration="more" @click="toggleHeight($event)" v-if="effectList.length>12"></footer>
+                            </section>
                             <section data-scope="biaodiwu" v-show="subjectMatterShow">
                                 <header class="">
-                                    <h4>技术专家</h4>
+                                    <h4>影响产业</h4>
                                 </header>
                                 <div>
                                     <el-table
@@ -132,40 +271,57 @@
                                         :total="biaodiwuList.length">
                                 </el-pagination>
                             </section>
-                            <div id="bibliography" v-loading="learnSourceLoading" element-loading-background="#2C2C30">
-                                <h4 class="fade-in"><span style="color: #66BBFF">{{inputTemp}}</span> cf文章推荐</h4>
-                                <el-popover
-                                        placement="top-end"
-                                        title=""
-                                        width="240"
-                                        trigger="hover"
-                                        :visible-arrow=false
-                                        popper-class="myPopper">
-                                    <div class="sentiment_img">
-                                        <span><img :src="positive" />正向情绪</span>
-                                        <span><img :src="neutral" />中立情绪</span>
-                                        <span><img :src="negative" />负向情绪</span>
+                            <section data-scope="chain" v-show="industryLinkShow">
+                                <header class="">
+                                    <h4>产业链</h4>
+                                </header>
+                                <div>
+                                    <div class="echarts_industry_wrapper" style="width: 100%">
+                                        <echarts-industry-link v-on:showDialog="handleReceive" :source="source"></echarts-industry-link>
                                     </div>
-                                    <div slot="reference" id="explainEmo"><img :src="icon_sentiment" /></div>
-                                </el-popover>
-                                <ol class="queue-in" v-if="rightShow">
-                                    <li v-for="(item,index) in learnSourceList" :key="index" :data-events="item[1].keys.join('*')" :data-url="item[0]" v-if="index<10">
-                                        <a :href="item[0]" target="_blank">
-                                            <div class="newsright-title">
-                                                <h5><img :src="loadSentimentIcon(item[1].news.news_sentiment)" />{{item[1].news.news_title}}</h5>
-                                                <span>
-                                                <time>{{item[1].news.news_pubtime|formatDate}}</time>
-                                                <cite>{{item[1].news.news_source}}</cite>
-                                            </span>
-                                            </div>
-                                            <div v-html="'...'+item[1].news.sent" class="newsright-content"></div>
-                                        </a>
-                                    </li>
-                                </ol>
-
-                            </div>
+                                </div>
+                            </section>
+                            <section data-scope="relatedData" style="width: 100%" v-show="associateDataShow">
+                                <header class="">
+                                    <h4>关联数据</h4>
+                                </header>
+                                <div>
+                                    <div class="highcharts_wrapper" style="margin-top:-.5rem;width:100%">
+                                        <highchartsRelate :opt="relatedData" ref="highchartsRelate"></highchartsRelate>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
+                    <div class="card" data-type="suggest" v-show="relatedSearchShow">
+                        <header class="">
+                            <h4 style="font-size: 1rem" v-if="searchNoResult!=10002">相关搜索</h4>
+                            <h4 style="font-size: 1rem" v-else>没有搜到<span style="color:#6bf">{{inputTemp}}</span>相关事件，您是不是想找：</h4>
+                        </header>
+                        <ul class="queue-in">
+                            <li v-for="(item,index) in relatedSearch" :key="index">
+                                <a data-decoration="search" href="javascript:void(0)" target="_self" @click="toSearchResult(item)">{{item}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card" data-type="web" v-show="relatedNewsShow">
+                        <header class="">
+                            <h4 style="font-size: 1rem">相关资讯</h4>
+                        </header>
+                        <div class="newscard-wrap">
+                            <a :href="item.news_url" target="_blank" v-for="(item,index) in relatedNews" :key="index">
+                                <div class="newscard-title">
+                                    <h3><img :src="loadSentimentIcon(item.news_sentiment)" />{{item.news_title}}</h3>
+                                    <span>
+                                        <time>{{item.news_pubtime|formatDate}}</time>
+                                        <cite>{{item.news_source}}</cite>
+                                    </span>
+                                </div>
+                                <div v-html="'...'+item.news_content" class="newscard-content"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card" data-type="next" data-decoration="more" data-input="孟晚舟" data-offset="20" data-size="10" data-loading="false" @click='loadMore' v-show="relatedNewsShow" v-loading="loading_loadMore" element-loading-background="#2C2C30">加载更多</div>
                 </main>
                 <aside id="right" v-if="searchNoResult==0" >
                     <div id="contact-wrapper">
@@ -180,62 +336,37 @@
                             <div slot="reference">诗越云霄又见君</div>
                         </el-popover>
                     </div>
-                    <section data-scope="description" :data-truncate="conceptList.default.length<=12?'all':'peak'" style="border-top:none" v-show="conceptShow">
-                        <header class="">
-                            <h4>概念描述</h4>
-                        </header>
-                        <div :data-clip="conceptList.default.length<=12?'false':'true'" class="conceptDataDiv" style="">
-                            <!-- 输入拆解出多个标签 -->
-                            <div style="display:block;width:100%;margin-bottom: .5rem" >
-                                <span :class="{'active':currentTag == item2, 'tagspan':true}" v-for="(item2,index2) in conceptList.tags" :key="index2" @click="changeTag(item2)">{{item2}}</span>
+                    <div id="bibliography" v-loading="learnSourceLoading" element-loading-background="#2C2C30">
+                        <h4 class="fade-in"><span style="color: #66BBFF">{{inputTemp}}</span> 学习来源</h4>
+                        <el-popover
+                                placement="top-end"
+                                title=""
+                                width="240"
+                                trigger="hover"
+                                :visible-arrow=false
+                                popper-class="myPopper">
+                            <div class="sentiment_img">
+                                <span><img :src="positive" />正向情绪</span>
+                                <span><img :src="neutral" />中立情绪</span>
+                                <span><img :src="negative" />负向情绪</span>
                             </div>
-                            <!--  -->
-                            <div v-for="(item,index) in conceptList.default" :key="index" :data-span="!item.expanded?'cell':'row'" :data-extra="index>11?'true':false">
-                                <article class="fact" :id="item._id" data-render="cell">
-                                    <dl data-answer="object" :data-color="levelColor(item)" :title="'该信息可信评分为' + item.weight">
-                                        <dd data-field="object" @click="toggleTagDetail(item)">{{item._id}}</dd>
-                                    </dl>
-                                </article>
-                                <transition name="router-slid">
-                                    <article class="fact"  data-render="tuple" v-if="item.expanded" style="margin-top: 0.75rem;">
-                                    <dl data-answer="object" :data-confidence="item.weight" :data-color="levelColor(item)" :title="'该信息可信评分为'+item.weight">
-                                        <dd data-field="概念">{{currentTag}}</dd>
-                                        <dd data-field="关系">描述</dd>
-                                        <dd data-field="描述信息">{{item._id}}</dd>
-                                    </dl>
-                                    <div :data-collapse="item.expanded?'collapse':'expanded'" style="padding-bottom: 0.5rem">
-                                        <span>可信度评分{{item.weight}}分，学习来源于以下等{{item.news.length}}条资讯</span>
-                                        <ul>
-                                            <li v-for="(itemnew,indexnew) in item.news" :key="indexnew">
-                                                <a :href="itemnew.news_url" target="_blank" >
-                                                    <div class="news-title">
-                                                        <h5>{{itemnew.news_title}}</h5>
-                                                        <div class="right-text">
-                                                            <time>{{itemnew.news_pubtime|formatDate}}</time>
-                                                            <cite>{{itemnew.news_source}}</cite>
-                                                        </div>
-                                                    </div>
-                                                    <div class="news-content">{{'...'+itemnew.sent}}</div>
-                                                </a>
-                                            </li>
-                                        </ul>
+                            <div slot="reference" id="explainEmo"><img :src="icon_sentiment" /></div>
+                        </el-popover>
+                        <ol class="queue-in" v-if="rightShow">
+                            <li v-for="(item,index) in learnSourceList" :key="index" :data-events="item[1].keys.join('*')" :data-url="item[0]" v-if="index<10">
+                                <a :href="item[0]" target="_blank">
+                                    <div class="newsright-title">
+                                        <h5><img :src="loadSentimentIcon(item[1].news.news_sentiment)" />{{item[1].news.news_title}}</h5>
+                                        <span>
+                                        <time>{{item[1].news.news_pubtime|formatDate}}</time>
+                                        <cite>{{item[1].news.news_source}}</cite>
+                                    </span>
                                     </div>
-                                </article>
-                                </transition>
-                            </div>
-                        </div>
-                        <footer data-decoration="more" @click="toggleHeight($event)" v-if="conceptList.default.length>12"></footer>
-                    </section>  
-                    <section data-scope="chain" v-show="industryLinkShow">
-                        <header class="">
-                            <h4>产业链</h4>
-                        </header>
-                        <div>
-                            <div class="echarts_industry_wrapper" style="width: 100%">
-                                <echarts-industry-link v-on:showDialog="handleReceive" :source="source"></echarts-industry-link>
-                            </div>
-                        </div>
-                    </section>
+                                    <div v-html="'...'+item[1].news.sent" class="newsright-content"></div>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
                 </aside>
             </section>
         </div>
@@ -1960,17 +2091,14 @@
                 color: #8E8E92;
                 display: block;
             }
-
-        }
-    }
-    #bibliography{
-        position: relative;
-        margin-left: 0;
-        margin-top: 1rem;
-        .el-popover__reference{
-            position:absolute;
-            top:-3px;
-            right:.5rem;
+            #bibliography{
+                position: relative;
+                .el-popover__reference{
+                    position:absolute;
+                    top:-3px;
+                    right:.5rem;
+                }
+            }
         }
     }
     body[data-layout='home'] #contact-wrapper{

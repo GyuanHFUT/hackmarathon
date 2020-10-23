@@ -1797,7 +1797,7 @@ section[data-scope=tag] .fact[data-render=cell] > dl:after {
 }
 
 #bibliography {
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
     color: #66BBFF
 }
 

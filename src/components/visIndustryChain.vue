@@ -1,16 +1,7 @@
 <template>
     <div class="wrapper">
         <div id="main">
-            <!-- <el-button style="z-index:999">点击</el-button> -->
         </div>
-        <!-- <div id="zoom_button">
-            <div class="zoom_wrapper">
-              <i class="el-icon-zoom-in" @click="zoomIn"></i>
-            </div>
-            <div class="zoom_wrapper">
-              <i class="el-icon-zoom-out" @click="zoomOut"></i>
-            </div>
-        </div> -->
         <div id="pop_button">
             <span @click="handleClick"><i class="el-icon-full-screen"></i>&nbsp;查看大图</span>
         </div>
@@ -136,6 +127,13 @@
                 }
                 // 使用刚指定的配置项和数据显示图表。
                 this.network = new Network(document.getElementById("main"),{nodes: this.data, edges: this.link},options);
+                // 点击事件监听
+                this.network.on("click", function (params) {
+                    if(params.nodes.length && this.body.data.nodes._data[params.nodes[0]].url){
+                        console.log(this.body.data.nodes._data[params.nodes[0]].url)
+                        window.open(this.body.data.nodes._data[params.nodes[0]].url)
+                    }
+                });
             },
 
             //格式转换
@@ -157,6 +155,7 @@
                     container['id'] = item.key;
                     container['label'] = item.name.split('@').join('\n')
                     container['group'] = item.type
+                    container['url'] = item.url
                     //container['group'] = 'main'
                     //container['draggable']=true
                    this.data.push(container)
